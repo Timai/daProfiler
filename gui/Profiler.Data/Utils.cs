@@ -208,7 +208,7 @@ namespace Profiler.Data
             // first continue flag is the second bit from the top, shift it into the sign
             bool cont = (b & 0x80) != 0;
 
-			for (int shift = 7; shift < 32 && cont; shift += 7)
+			for (int shift = 6; shift < 32 && cont; shift += 7)
 			{
 				b = r.ReadByte();
 				cont = (b & 0x80) != 0;
